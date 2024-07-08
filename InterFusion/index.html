@@ -51,26 +51,26 @@
           <h1 class="title is-1 publication-title">InterFusion: Text-Driven Generation of 3D Human-Object Interaction</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a >Sisi Dai</a><sup>1</sup>,</span>
+              <a href="https://sisidai.github.io/InterFusion/" target="_blank">Sisi Dai</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a >Wenhao Li</a><sup>1</sup>,</span>
+              <a href="https://sisidai.github.io/InterFusion/" target="_blank">Wenhao Li</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a >Haowen Sun</a><sup>2</sup>,
+              <a href="https://sisidai.github.io/InterFusion/" target="_blank">Haowen Sun</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a ">Haibin Huang</a><sup>3</sup>,
+              <a href="https://brotherhuang.github.io/" target="_blank">Haibin Huang</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a >Chongyang Ma</a><sup>3</sup>,
+              <a href="https://www.chongyangma.com/" target="_blank">Chongyang Ma</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a >Hui Huang</a><sup>2</sup>,
+              <a href="https://vcc.tech/~huihuang" target="_blank">Hui Huang</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a >Kai Xu</a><sup>1*</sup>
+              <a href="https://kevinkaixu.net/index.html" target="_blank">Kai Xu</a><sup>1*</sup>
             </span>
             <span class="author-block">
-              <a >Ruizhen Hu</a><sup>2*</sup>
+              <a href="https://csse.szu.edu.cn/staff/ruizhenhu/" target="_blank">Ruizhen Hu</a><sup>2*</sup>
             </span>
           </div>
 
@@ -80,7 +80,8 @@
             <span class="author-block"><sup>2</sup>Kuaishou Technology</span>
             <span class="eql-cntrb"><small><br><sup>*</sup>Equal Advising</small></span>
           </div>
-          <div style="height: 20px;"></div>
+          </br>
+          </br>
           <div class="columns is-centered">
             <div class="is-size-4 publication-venue">ECCV 2024</div>
           </div>
@@ -117,7 +118,6 @@
                   </a>
               </span>
             </div>
-
           </div>
         </div>
       </div>
@@ -180,11 +180,9 @@
     <!-- Overview. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
+        <h2 class="title is-3">Method Overview</h2>
         <div class="content has-text-justified">
-          <img src="./static/images/method.png"
-            class="interpolation-image"
-            alt="Interpolation end reference image."/>
+          <img src="./static/images/method.png " alt="Random Image" id="tree" height="100%">
           <p>
             InterFusion is a two-stage framework that transforms textual descriptions into detailed 3D human-object 
             interactions, initially synthesizing anchor poses and then optimizing human and object models with 
@@ -196,6 +194,31 @@
     <hr>
   </div>
 </section> 
+
+<!-- Method -->
+<section class="hero is-small">
+  <div class="hero-body">
+      <div class="container is-max-desktop">
+
+          <h2 class="title is-3 has-text-centered">Method</h2>
+          <img src="static/images/method.png" alt="Random Image" id="tree" height="100%">
+          </br>
+          </br>
+          <h2 class="subtitle has-text-centered">
+              Our method consists of two parts; <b>(1) Generating 3D HOI samples</b>, represented in upper box,
+              <b>(2) Learning Comprehensive Affordance from Generated 3D
+                  HOI Samples</b>,
+              represented in lower box. We introduce Adaptive Mask Inpainting
+              and Depth Optimization via
+              Weak Auxiliary Cue for generating diverse and precise 3D HOI samples. From the generated
+              samples, we
+              learn the pointwise distribution of relative orientation and proximity, which can be derived into
+              various
+              forms of 3D affordance including contact, orientational tendency, and spatial relation.
+          </h2>
+      </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
