@@ -39,6 +39,77 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        max-width: 1200px;
+        width: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+    .video-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 4px;
+        justify-content: flex-end; 
+    }
+    .media-container {
+        display: grid;
+        justify-content: flex-end; 
+        grid-template-columns: 1fr 2fr; /* Image takes 1/3 and video takes 2/3 */
+        padding: 0px;
+        width: 100%;
+        gap: 0px;
+    }
+    .image {
+        max-width: 100%;
+        max-height: 100%;
+        justify-self: end; /* Align image to the right */
+        align-self: end; 
+        border-radius: 4px;
+    }
+    .video-container {
+      width: 100%;
+      height: 450px; /* 调整容器的高度 */
+      overflow: hidden; /* 隐藏超出容器的部分 */
+      position: relative;
+    }
+    .video {
+        width: 100%;
+        
+        align-self: end; /* Align video to the bottom */
+        display: block;
+        margin: 0 auto 0;
+        border-radius: 4px;
+    }
+    .video.adjusted {
+      clip-path: inset(10% 0 0 0); /* 裁剪上方10% */
+      transform: translateY(-10%); /* 向上移动10% */
+    }
+    .video.adjusted-1 {
+      width: 100%;
+      height: 125%; /* 增加视频高度以补偿裁剪 */
+      clip-path: inset(8%  0 7%); /* 裁剪掉上部15% */
+      transform: translateY(-15%); /* 向上移动视频以填满容器 */
+      object-fit: cover; /* 确保视频覆盖容器 */
+      
+      top: -15%;
+      left: 0;
+    }
+    .video.adjusted-2 {
+      clip-path: inset(-10% 0 0 0); 
+      transform: translateY(10%); /* 向下移动10% */
+    }
+    .caption {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+    }
+  </style>
 </head>
 <body>
 
@@ -124,7 +195,7 @@
   </div>
 </section>
 
-
+    <!-- 
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
@@ -139,9 +210,21 @@
     </div>
     </br>
     </br>
-    <!-- <hr> -->
   </div>
 </section>  
+
+-->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="video-container">
+        <video src="./static/videos/teaser-.mp4" autoplay muted loop class="video" > </video>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -182,8 +265,7 @@
   <div class="hero-body">
       <div class="container is-max-desktop">
           <h2 class="title is-3 has-text-centered">Method</h2>
-          <img src="static/images/method.png" alt="Random Image" id="tree" height="100%">
-          </br>
+          <video src="./static/videos/overview.mp4" autoplay muted loop class="video" > </video>
           </br>
           <h2 class="subtitle has-text-centered">
               InterFusion is a two-stage framework that transforms textual descriptions into detailed 3D human-object 
@@ -191,6 +273,24 @@
               constraints from estimated pose and textual prompts.
           </h2>
       </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Overview. -->
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Visual Results</h2>
+      <h2 class="title is-3"> </h2>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="video-container">
+        <video src="./static/videos/results.mp4" autoplay muted loop class="video adjusted-1" > </video>
+      </div>
+    </div>
   </div>
 </section>
 
