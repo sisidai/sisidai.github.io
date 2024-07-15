@@ -40,81 +40,73 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <style>
-    .video-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-        max-width: 1200px;
-        width: 100%;
-        padding: 24px;
-        box-sizing: border-box;
-    }
-    .video-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 4px;
-        justify-content: flex-end; 
-    }
-    .media-container {
-        display: grid;
-        justify-content: flex-end; 
-        grid-template-columns: 1fr 2fr; /* Image takes 1/3 and video takes 2/3 */
-        padding: 0px;
-        width: 100%;
-        gap: 0px;
-    }
-    .image {
-        max-width: 100%;
-        max-height: 100%;
-        justify-self: end; /* Align image to the right */
-        align-self: end; 
-        border-radius: 4px;
-    }
     .video-container {
-      width: 100%;
-      height: 555px; /* 调整容器的高度 */
+      height: 425px;
       overflow: hidden; /* 隐藏超出容器的部分 */
       position: relative;
+      margin-bottom: 0; /* 去除视频容器的下边距 */
+      margin: 0;
+      padding: 0;
+    }
+    .video-container-2 {
+      height: auto;
+      overflow: hidden; /* 隐藏超出容器的部分 */
+      margin-bottom: 0; /* 去除视频容器的下边距 */
+      margin: 0;
+      padding: 0;
+      transform: translateY(-30%);
+      margin-bottom: -15%;
     }
     .video {
-        width: 100%;
-        
         align-self: end; /* Align video to the bottom */
         display: block;
         margin: 0 auto 0;
-        border-radius: 4px;
-    }
-    .video.adjusted {
-      clip-path: inset(10% 0 0 0); /* 裁剪上方10% */
-      transform: translateY(-10%); /* 向上移动10% */
+        border-radius: 0px;
+        padding: 0;
+        margin: 0;
     }
     .video.adjusted-1 {
       width: 100%;
-      height: 125%; /* 增加视频高度以补偿裁剪 */
-      clip-path: inset(8%  0 7%); /* 裁剪掉上部15% */
+      height: auto; /* 增加视频高度以补偿裁剪 */
+      /*clip-path: inset(8%  0 7% 0); /* 裁剪掉上部15% */
       transform: translateY(-15%); /* 向上移动视频以填满容器 */
       object-fit: cover; /* 确保视频覆盖容器 */
-      
       top: -15%;
       left: 0;
+      right: 0; /* 保证视频水平居中 */
+      bottom: 0;
     }
-    .video.adjusted-2 {
-      clip-path: inset(-10% 0 0 0); 
-      transform: translateY(10%); /* 向下移动10% */
+    .video.adjusted-3 {
+      width: 100%;
+      height: 100%; /* 增加视频高度以补偿裁剪 */
+      clip-path: inset(0 0 0 0);
+      transform: translateY(18%); 
+      object-fit: cover; /* 确保视频覆盖容器 */
+      top: 0;
+      left: 0;
     }
     .caption {
         margin-top: 10px;
         font-size: 14px;
         color: #333;
     }
+    .section-1{
+      border: 0;
+      padding: 0;
+      margin: 0rem 0rem 0rem 0rem;
+      margin-bottom: 0rem;
+    }
+    .custom-container {
+      border: 0;
+      padding: 0 !important;  /* 覆盖默认的内边距 */
+      margin: 0 !important;   /* 覆盖默认的外边距 */
+    }
   </style>
 </head>
 <body>
 
 
-<section class="hero">
+<section class=".section-1 hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -195,34 +187,11 @@
   </div>
 </section>
 
-    <!-- 
-<section class="hero teaser">
+<section class="section" class="section-1 hero" >
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <img src="./static/images/teaser.png"
-              class="interpolation-image"
-              alt="Interpolation end reference image."/>
-        <h2 class="subtitle has-text-centered">
-          Given a text prompt, our method InterFusion can generate diverse 3D scenes of a person interacting with an object.
-        </h2>
+      <div class="video-container-2">
+        <video src="./static/videos/teaser++.mp4" autoplay muted loop class="video adjusted-3" > </video>
       </div>
-    </div>
-    </br>
-    </br>
-  </div>
-</section>  
-
--->
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="video-container">
-        <video src="./static/videos/teaser-.mp4" autoplay muted loop class="video adjusted-3" > </video>
-      </div>
-    </div>
   </div>
 </section>
 
