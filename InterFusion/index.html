@@ -101,6 +101,10 @@
       padding: 0 !important;  /* 覆盖默认的内边距 */
       margin: 0 !important;   /* 覆盖默认的外边距 */
     }
+    .section-new{
+      position: relative;
+      z-index: 10; /* Ensures the links are on top */
+    }
   </style>
 </head>
 <body>
@@ -151,7 +155,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <span class="link-block section-new">
                 <a href="https://arxiv.org/pdf/2403.15612"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -160,7 +164,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              <span class="link-block section-new">
                 <a href="https://arxiv.org/abs/2403.15612"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -170,7 +174,7 @@
                 </a>
               </span>
               <!-- Code Link. -->
-              <span class="link-block">
+              <span class="link-block section-new">
                 <a href="https://github.com/sisidai/InterFusion"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
